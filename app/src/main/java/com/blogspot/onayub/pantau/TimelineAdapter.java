@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
+public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.PersonViewHolder>{
 
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
@@ -40,7 +40,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
     }
     List<Card> cards;
 
-    RVAdapter(List<Card> cards){
+    TimelineAdapter(List<Card> cards){
         this.cards = cards;
     }
 
@@ -52,7 +52,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
 
     @Override
     public PersonViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.overview_tab, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_view, viewGroup, false);
         PersonViewHolder pvh = new PersonViewHolder(v);
         return pvh;
     }

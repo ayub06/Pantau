@@ -25,7 +25,6 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="60dp">
-
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_name"
             android:layout_width="match_parent"
@@ -37,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:inputType="number"
-                android:hint="Nominal Pengeluaran" />
+                android:hint="Nominal Transaksi" />
         </android.support.design.widget.TextInputLayout>
 
         <!--<android.support.design.widget.TextInputLayout
@@ -66,14 +65,14 @@
                 android:hint="@string/hint_password" />
         </android.support.design.widget.TextInputLayout>-->
 
-        <Button android:id="@+id/pilih_foto"
+        <Button
+            android:id="@+id/pilih_foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pilih Foto"
             android:background="@color/colorPrimary"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:textColor="@android:color/white"/>
-
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

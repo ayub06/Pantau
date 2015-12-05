@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InputActivity"
+            android:name=".AddCard"
             android:label="@string/title_activity_input"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

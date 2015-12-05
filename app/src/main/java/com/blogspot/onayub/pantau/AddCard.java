@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class InputActivity extends AppCompatActivity {
+public class AddCard extends AppCompatActivity {
 
     private EditText inputNominal;
     private Button pilihFoto;
@@ -34,10 +34,9 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 nominal = Long.getLong(inputNominal.getText().toString());
 
-                NavUtils.navigateUpFromSameTask(InputActivity.this);
+                NavUtils.navigateUpFromSameTask(AddCard.this);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 }
