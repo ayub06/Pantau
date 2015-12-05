@@ -8,76 +8,82 @@ import android.widget.TextView;
  * Created by sendt on 12/5/2015.
  */
 public class Card {
-    private ImageView foto;
-    private TextView nama;
-    private TextView jabatan;
-    private ImageView nota;
-    private ImageView tanda;
-    private TextView nominal;
-    private Button komentar;
-    private Button rincian;
+    private int foto;
+    private String nama;
+    private String jabatan;
+    private int nota;
+    private int tanda;
+    private long nominal;
+    private String komentar;
+    private String rincian;
 
-    public ImageView getFoto() {
-        return foto;
-    }
-
-    public void setFoto(ImageView foto) {
+    public Card(String nama, String jabatan, int foto) {
         this.foto = foto;
-    }
-
-    public TextView getNama() {
-        return nama;
-    }
-
-    public void setNama(TextView nama) {
         this.nama = nama;
-    }
-
-    public TextView getJabatan() {
-        return jabatan;
-    }
-
-    public void setJabatan(TextView jabatan) {
         this.jabatan = jabatan;
     }
 
-    public ImageView getNota() {
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getJabatan() {
+        return jabatan;
+    }
+
+    public void setJabatan(String jabatan) {
+        this.jabatan = jabatan;
+    }
+
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(ImageView nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
 
-    public ImageView getTanda() {
+    public int getTanda() {
         return tanda;
     }
 
-    public void setTanda(ImageView tanda) {
+    public void setTanda(int tanda) {
         this.tanda = tanda;
     }
 
-    public TextView getNominal() {
+    public long getNominal() {
         return nominal;
     }
 
-    public void setNominal(TextView nominal) {
+    public void setNominal(long nominal) {
         this.nominal = nominal;
     }
 
-    public Button getKomentar() {
+    public String getKomentar() {
         return komentar;
     }
 
-    public void setKomentar(Button komentar) {
+    public void setKomentar(String komentar) {
         this.komentar = komentar;
     }
 
-    public Button getRincian() {
+    public String getRincian() {
         return rincian;
     }
 
-    public void setRincian(Button rincian) {
+    public void setRincian(String rincian) {
         this.rincian = rincian;
     }
 }

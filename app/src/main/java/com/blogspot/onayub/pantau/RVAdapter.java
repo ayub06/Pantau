@@ -2,35 +2,16 @@ package com.blogspot.onayub.pantau;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
-
-
-    List<Card> persons;
-
-    RVAdapter(List<Card> persons){
-        this.persons = persons;
-    }
-
-    @Override
-    public PersonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
-    }
-
-    @Override
-    public void onBindViewHolder(PersonViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return 0;
-    }
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
@@ -54,9 +35,36 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
             nominal=(TextView)itemView.findViewById(R.id.nominal);
             komentar=(Button)itemView.findViewById(R.id.komentar);
             rincian=(Button)itemView.findViewById(R.id.rincian);
-
-
         }
     }
+    List<Card> cards;
 
+    RVAdapter(List<Card> cards){
+        this.cards = cards;
+    }
+
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    @Override
+    public PersonViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.overview_tab, viewGroup, false);
+        PersonViewHolder pvh = new PersonViewHolder(v);
+        return pvh;
+    }
+
+    @Override
+    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
+        personViewHolder.personName.setText(cards.get(i).getNama());
+        personViewHolder.personJob.setText(cards.get(i).getJabatan());
+        personViewHolder.personPhoto.setImageResource(cards.get(i).getFoto());
+    }
+
+    @Override
+    public int getItemCount() {
+        return cards.size();
+    }
 }

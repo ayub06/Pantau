@@ -24,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -102,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
+
+        private List<Card> card;
+        private RecyclerView rv;
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
@@ -126,17 +131,22 @@ public class MainActivity extends AppCompatActivity {
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
-            ArrayList<String> arrayList=new ArrayList<String>;
-            arrayList.add(0,"ListNol");
-            arrayList.add(1,"ListSatu");
-
-
-
-            RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv);
+            //Start editing
+            rv = (RecyclerView)rootView.findViewById(R.id.rv);
             rv.setHasFixedSize(true);
             LinearLayoutManager llm = new LinearLayoutManager(getContext());
             rv.setLayoutManager(llm);
+
+            card = new ArrayList<>();
+            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+
+            RVAdapter adapter = new RVAdapter(card);
+            rv.setAdapter(adapter);
+
             return rootView;
+
         }
     }
 
