@@ -129,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> arrayList=new ArrayList<String>;
             arrayList.add(0,"ListNol");
             arrayList.add(1,"ListSatu");
-            ArrayAdapter<> arrayAdapter=new ArrayAdapter(getContext(),R.layout.cardview,arrayList);
 
 
 
