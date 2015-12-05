@@ -34,21 +34,23 @@
         <ImageView
             android:layout_width="64dp"
             android:layout_height="64dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/aku"
             android:id="@+id/foto_profil"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:textSize="24sp"
             android:text="Rahmat Wijayanto"
+            android:layout_marginTop="6dp"
             android:gravity="center_vertical"
             android:id="@+id/nama"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/foto_profil"
-            android:layout_above="@+id/jabatan" />
+            android:layout_toEndOf="@+id/foto_profil" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,8 +58,8 @@
             android:text="Ketua bidang sosial budaya"
             android:gravity="center_vertical"
             android:id="@+id/jabatan"
-            android:layout_alignBottom="@+id/foto_profil"
-            android:layout_toEndOf="@+id/foto_profil" />
+            android:layout_below="@+id/nama"
+            android:layout_alignStart="@+id/nama" />
 
         <ImageView
             android:layout_width="match_parent"
