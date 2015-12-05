@@ -5,14 +5,17 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/card_view"
+    android:layout_margin="8dp"
     android:layout_alignParentBottom="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:elevation="16dp"
         android:layout_height="match_parent">
 
         <Button
             android:layout_width="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_height="wrap_content"
             android:id="@+id/rincian"
             android:text="@string/rincian"
@@ -22,6 +25,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:text="@string/komentar"
             android:id="@+id/komentar"
             android:layout_below="@+id/nominal"
@@ -59,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/nota"
+            android:src="@drawable/image_in_timeline"
             android:layout_below="@+id/foto_profil"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true" />
@@ -77,7 +82,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:id="@+id/tanda"
-            android:src="@drawable/image-in-timeline"
+            android:src="@drawable/image_in_timeline"
             android:layout_below="@+id/nota"
             android:layout_alignParentStart="true" />
 
