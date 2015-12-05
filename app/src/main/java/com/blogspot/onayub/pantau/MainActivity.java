@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,14 +62,18 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        //tabLayout.addTab(tabLayout.newTab(),1);
         tabLayout.setupWithViewPager(mViewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Bundle bundle = new Bundle();
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                bundle.putInt("edit", 0);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
@@ -129,25 +134,27 @@ public class MainActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
+            //Toast.makeText(getContext(),Toast.LENGTH_SHORT)
+           // .show();
             //Start editing
-            rv = (RecyclerView)rootView.findViewById(R.id.rv);
-            rv.setHasFixedSize(true);
-            LinearLayoutManager llm = new LinearLayoutManager(getContext());
-            rv.setLayoutManager(llm);
+            //if(section==1){
+                rv = (RecyclerView)rootView.findViewById(R.id.rv);
+                rv.setHasFixedSize(true);
+                LinearLayoutManager llm = new LinearLayoutManager(getContext());
+                rv.setLayoutManager(llm);
 
-            card = new ArrayList<>();
-            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
-            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
-            card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+                card = new ArrayList<>();
+                card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+                card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
+                card.add(new Card("Ayyub", "Ketua Bidang SosHum", R.drawable.aku));
 
-            RVAdapter adapter = new RVAdapter(card);
-            rv.setAdapter(adapter);
-
+                RVAdapter adapter = new RVAdapter(card);
+                rv.setAdapter(adapter);
+            //}
             return rootView;
-
         }
     }
 
