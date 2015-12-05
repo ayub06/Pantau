@@ -1,27 +1,141 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/card_view"
     android:layout_margin="8dp"
     android:layout_alignParentBottom="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:elevation="16dp">
 
-    </RelativeLayout>
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-    </RelativeLayout>
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/colorAccent"
+            android:id="@+id/relativeLayout2"
+            android:layout_below="@+id/judul"
+            android:layout_alignStart="@+id/judul">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/relativeLayout"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignTop="@+id/relativeLayout2"
+            android:layout_alignStart="@+id/relativeLayout2">
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Pemerintah Daerah Yogyakarta"
+            android:id="@+id/judul"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Anggaran:"
+            android:id="@+id/anggaran"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_toEndOf="@+id/relativeLayout4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="2.000.000"
+            android:id="@+id/nominal_anggaran"
+            android:layout_below="@+id/anggaran"
+            android:layout_alignStart="@+id/anggaran" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Pemasukan:"
+            android:id="@+id/pemasukan"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/nominal_anggaran"
+            android:layout_alignStart="@+id/nominal_anggaran" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="1.500.000"
+            android:id="@+id/nominal_pemasukan"
+            android:layout_below="@+id/pemasukan"
+            android:layout_alignStart="@+id/pemasukan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Pengeluaran:"
+            android:id="@+id/pengeluaran"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/nominal_pemasukan"
+            android:layout_alignStart="@+id/nominal_pemasukan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="200.000"
+            android:id="@+id/nominal_pengeluaran"
+            android:layout_below="@+id/pengeluaran"
+            android:layout_alignStart="@+id/pengeluaran" />
+
+        <RelativeLayout
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@color/colorAccent"
+            android:id="@+id/relativeLayout4"
+            android:layout_marginRight="6dp"
+            android:layout_above="@+id/nominal_anggaran"
+            android:layout_alignStart="@+id/relativeLayout2">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/relativeLayout3"
+            android:layout_marginRight="6dp"
+            android:layout_above="@+id/nominal_pemasukan"
+            android:layout_alignStart="@+id/relativeLayout5" />
+
+        <RelativeLayout
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginRight="6dp"
+            android:id="@+id/relativeLayout5"
+            android:layout_above="@+id/nominal_pengeluaran"
+            android:layout_alignStart="@+id/relativeLayout2" />
+
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>
