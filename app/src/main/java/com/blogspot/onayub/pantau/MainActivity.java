@@ -4,6 +4,8 @@ import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -17,7 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -119,6 +125,18 @@ public class MainActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            ArrayList<String> arrayList=new ArrayList<String>;
+            arrayList.add(0,"ListNol");
+            arrayList.add(1,"ListSatu");
+            ArrayAdapter<> arrayAdapter=new ArrayAdapter(getContext(),R.layout.cardview,arrayList);
+
+
+
+            RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv);
+            rv.setHasFixedSize(true);
+            LinearLayoutManager llm = new LinearLayoutManager(getContext());
+            rv.setLayoutManager(llm);
             return rootView;
         }
     }
@@ -150,11 +168,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Timeline";
                 case 1:
-                    return "SECTION 2";
+                    return "Overview";
                 case 2:
-                    return "SECTION 3";
+                    return "Profile";
             }
             return null;
         }
