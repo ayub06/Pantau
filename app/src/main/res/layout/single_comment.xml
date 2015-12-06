@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/foto_comment"
+        android:layout_alignParentTop="true"
+        android:layout_margin="6dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nama User"
+        android:id="@+id/nama_comment"
+        android:layout_marginBottom="6dp"
+        android:layout_alignTop="@+id/foto_comment"
+        android:layout_toEndOf="@+id/foto_comment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="kometar bla bla bla bla blaaaaah hmmm hmm hm"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/comment"
+        android:layout_below="@+id/nama_comment"
+        android:layout_alignStart="@+id/nama_comment" />
+</RelativeLayout>
