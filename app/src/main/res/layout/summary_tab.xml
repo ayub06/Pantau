@@ -13,7 +13,7 @@
         android:elevation="16dp">
 
         <RelativeLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="42dp"
             android:background="@color/colorAccent"
             android:id="@+id/anggaran"
